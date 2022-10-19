@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Create Product</h1>
+<a href="/product">back</a>
+<form action="/product/save" method="post" th:object="${product}">
+    <label>
+        Name:
+        <input type="text" th:field="*{name}">
+    </label>
+    <label>
+        Price:
+        <input type="number" th:field="*{price}">
+    </label>
+    <label>
+        description:
+        <input type="text" th:field="*{description}">
+    </label>
+    <label>
+        Manufacturer:
+        <input type="text" th:field="*{manufacturer}">
+    </label>
+    <button>Create</button>
+
+
+</form>
+</body>
+</html>
